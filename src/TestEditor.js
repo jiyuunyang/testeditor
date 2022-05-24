@@ -19,7 +19,7 @@ const TestEditor = () => {
           maxlength='1000'
           onChange={(e) => {
             setText(e.target.value);
-            setHeader('입력중');
+            e.target.value.length > 0 ? setHeader('입력중') : setHeader('본문입력');
           }}
         >
           {text}
